@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.ts",
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].[fullhash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
