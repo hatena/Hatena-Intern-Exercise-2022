@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
@@ -29,7 +30,9 @@ module.exports = {
   ],
   devtool: "source-map",
   devServer: {
-    contentBase: "./dist",
     host: "0.0.0.0",
+    static: {
+      directory: path.join(__dirname, "./dist"),
+    },
   },
 };
